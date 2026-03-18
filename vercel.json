@@ -1,16 +1,27 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
-      "destination": "https://www.atelierduchatbot.com/client-login"
-    },
+      "destination": "/client-login",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     {
       "source": "/client-login",
       "destination": "https://www.atelierduchatbot.com/client-login"
     },
     {
-      "source": "/(.*)",
+      "source": "/(assets/.*)",
       "destination": "https://www.atelierduchatbot.com/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "x-vercel-skip-toolbar", "value": "1" }
+      ]
     }
   ]
 }
