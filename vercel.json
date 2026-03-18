@@ -1,8 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "destination": "https://www.atelierduchatbot.com/client-login"
+    },
+    {
+      "source": "/client-login",
+      "destination": "https://www.atelierduchatbot.com/client-login"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://www.atelierduchatbot.com/$1"
     }
   ]
 }
